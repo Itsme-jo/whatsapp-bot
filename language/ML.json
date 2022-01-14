@@ -5,10 +5,10 @@
     "AUTHOR": "AsenaDev",
     "STRINGS": {
         "_asena": {
-            "DESC": "To Manage Chat bot.\n.lydia in chat to activate whole group\nReply to a person or mention to activate that person.",
-            "L_ACTIVATED": "```Lydia activated for {}\nTo stop .lydia stop```",
-            "L_DEACTIVATED": "```Lydia deactivated for {}```",
-            "L_NOT_ACTIVATED": "```Lydia not activated for {}```"
+            "DESC": "To Manage Chat bot.\n.jordanies in chat to activate whole group\nReply to a person or mention to activate that person.",
+            "L_ACTIVATED": "```jordanies activated for {}\nTo stop .jordanies stop```",
+            "L_DEACTIVATED": "```jordanies deactivated for {}```",
+            "L_NOT_ACTIVATED": "```jordanies not activated for {}```"
         },
         "_plugin": {
             "INSTALL_DESC": "Install external plugins.",
