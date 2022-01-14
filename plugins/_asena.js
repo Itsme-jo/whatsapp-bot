@@ -8,7 +8,7 @@ WhatsAsena - Yusuf Usta
 
 const Asena = require("../Utilis/events")
 const Config = require("../config")
-const { lydia, getLydia, setLydia } = require("../Utilis/lydia")
+const { jordanies, getjordanies, setjordanies } = require("../Utilis/jordanies")
 const { getName, readmore } = require("../Utilis/download")
 const Language = require("../language")
 const { textToStylist, addSpace } = require("../Utilis/Misc")
@@ -80,7 +80,7 @@ Asena.addCommand(
 
 Asena.addCommand(
   {
-    pattern: "lydia ?(.*)",
+    pattern: "jordanies ?(.*)",
     fromMe: true,
     desc: Lang.DESC,
   },
@@ -93,17 +93,17 @@ Asena.addCommand(
         : message.reply_message.jid
       : message.jid
     if (match.startsWith("stop")) {
-      let chat = await getLydia(jid)
+      let chat = await getjordanies(jid)
       if (!chat)
         return await message.sendMessage(
           Lang.L_NOT_ACTIVATED.format(await getName(jid, message.client))
         )
-      await setLydia(jid, false)
+      await setjordanies(jid, false)
       return await message.sendMessage(
         Lang.L_DEACTIVATED.format(await getName(jid, message.client))
       )
     }
-    await setLydia(jid, true)
+    await setjordanies(jid, true)
     return await message.sendMessage(
       Lang.L_ACTIVATED.format(await getName(jid, message.client))
     )
@@ -111,7 +111,7 @@ Asena.addCommand(
 )
 
 Asena.addCommand({ on: "text", fromMe: false }, async (message, match) => {
-  let chat = await lydia(message)
+  let chat = await jordanies(message)
   if (!chat) return
   return await message.sendMessage(chat, { quoted: message.data })
 })
